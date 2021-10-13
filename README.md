@@ -14,6 +14,7 @@ Regisered to the [challenge](https://nomadcoders.co/faq/challenge/vanillajs) to 
 
 
 ## What I Learn
+
 - Recap basic JavaScript syntax
 - JavaScript for web browsers
   - **Document Object**: Indicating the HTML document
@@ -42,10 +43,30 @@ Regisered to the [challenge](https://nomadcoders.co/faq/challenge/vanillajs) to 
   - To change style of Elements when certain event occurs,
     - It is preferred to add/remove `className`, which associated with the pre-defined styles on CSS file.
     (Use **Element.classList()** to get the array of class names, then modify the array to change styles.)
+- Validate user's input
+  - length (`maxlength` and `minlength`) and whether the input is required or not (`required`) can be checked without JavaScript (HTML Support).
+  - To trigger **HTML validation**, the elements should be located inside `<form>` block.
+    - Pressing `<button>`/Pressing `Enter` inside `<form>` block let the form to be submitted. 
+    - Once form submitted, the website is refreshed.
+    This behavior can be blocked by adding **SubmitEvent.preventDefault()** on the callback function, which added to the `EventListener` of `submit` event.
 
 
 ## Project
+
 ### Momentum Clone
-\<Image Inserted Here>  
+
+Followed the lecture contents to build Clone of Momentum app. 
+Only used HTML, CSS, Vanilla JavaScript.  
+
+**Feature List (From Lecture)**  
+- Login (Get username and print)
+
+**What I added/modified**  
+- Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+
+| \<Demo Image> | 
+|:--:| 
+| *Demo Image of Momentum Clone App* |
+
 Code Link: \<URL>  
 Demo Link: \<URL>
