@@ -50,6 +50,8 @@ Regisered to the [challenge](https://nomadcoders.co/faq/challenge/vanillajs) to 
     - Once form submitted, the website is refreshed.
     This behavior can be blocked by adding **SubmitEvent.preventDefault()** on the callback function, which added to the `EventListener` of `submit` event.
 - **MouseEvent** is generated when user click the Element, and it contains coordinate information where the user clicked.
+- **setInterval(\<function>, \<interval in ms>)**: Used when some action is occered every given time.
+- **setTimeout(\<function>, \<timeout in ms>)**: Used when some action is occered only once after given time.
 
 
 ## Project
@@ -65,6 +67,9 @@ Only used HTML, CSS, Vanilla JavaScript.
     Display the greeting message.
   - Use **localStorage** to store username
   - If username exists in the `localStoreage`, display the message with stored username.
+- Clock: Format - *HH:MM:SS*
+  - use **setInterval()** to generate the clock for each second
+  - Format using **String.padStart(\<maxLength>, "<\padString>)** and **String.padEnd(\<maxLength>, <\padString>)**.
 
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
