@@ -70,9 +70,15 @@ Only used HTML, CSS, Vanilla JavaScript.
 - Clock: Format - *HH:MM:SS*
   - use **setInterval()** to generate the clock for each second
   - Format using **String.padStart(\<maxLength>, "<\padString>)** and **String.padEnd(\<maxLength>, <\padString>)**.
+- Random quotes
 
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+- Rather than using pre-defined list of quotes object, it fetches some quotes from outside API (https://type.fit/api/quotes).
+  - Before it loads the quotes, it will use saved quotes (saved at `localStorage`).
+    - When timeout, the saved quote will be used.
+  - Used [**Fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to download quotes
+  - The downloaded (and selected) quote will saved at `localStorage`.
 
 | \<Demo Image> | 
 |:--:| 
