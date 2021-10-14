@@ -49,6 +49,7 @@ Regisered to the [challenge](https://nomadcoders.co/faq/challenge/vanillajs) to 
     - Pressing `<button>`/Pressing `Enter` inside `<form>` block let the form to be submitted. 
     - Once form submitted, the website is refreshed.
     This behavior can be blocked by adding **SubmitEvent.preventDefault()** on the callback function, which added to the `EventListener` of `submit` event.
+- **MouseEvent** is generated when user click the Element, and it contains coordinate information where the user clicked.
 
 
 ## Project
@@ -60,6 +61,10 @@ Only used HTML, CSS, Vanilla JavaScript.
 
 **Feature List (From Lecture)**  
 - Login (Get username and print)
+  - Once user enters the username, the form should disappear.
+    Display the greeting message.
+  - Use **localStorage** to store username
+  - If username exists in the `localStoreage`, display the message with stored username.
 
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
@@ -68,5 +73,5 @@ Only used HTML, CSS, Vanilla JavaScript.
 |:--:| 
 | *Demo Image of Momentum Clone App* |
 
-Code Link: \<URL>  
+Code Link: https://github.com/hyecheol123/NomadCoder-Momentum/tree/main/momentum-clone   
 Demo Link: \<URL>
