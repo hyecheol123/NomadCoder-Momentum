@@ -77,6 +77,9 @@ Only used HTML, CSS, Vanilla JavaScript.
   - Using **target** of `mouseEvent` (generated on click) to identify which todo list item will be removed.
   - Using **Array.filter()** to delete item of ToDo list.
     - It gives new array excluding the delete target (Filter function should be coded).
+- Display weather
+  - Use **navigator.geolocation.getCurrentPosition(\<function for success>, \<function for error>)** to get location of the device.
+  - Use OpenWeather API (https://openweathermap.org/api) to retrieve current location's name and weather.
 
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
@@ -94,6 +97,10 @@ Only used HTML, CSS, Vanilla JavaScript.
     - `background-repeat: no-repeat` to never repeat the image.
 - Optimize script loading
   - use [**defer** and **async**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) keyword
+- Able to make user's to choose their temperature unit preferrence
+  - Preference will be stored in `localStorage`
+  - By default, Celcius will be used.
+- Display weather icon, retrieved from the API (https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2)
 
 | \<Demo Image> | 
 |:--:| 
