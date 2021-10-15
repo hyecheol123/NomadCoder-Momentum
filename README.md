@@ -69,8 +69,10 @@ Only used HTML, CSS, Vanilla JavaScript.
   - If username exists in the `localStoreage`, display the message with stored username.
 - Clock: Format - *HH:MM:SS*
   - use **setInterval()** to generate the clock for each second
-  - Format using **String.padStart(\<maxLength>, "<\padString>)** and **String.padEnd(\<maxLength>, <\padString>)**.
+  - Format using **String.padStart(\<maxLength>, \<padString>)** and **String.padEnd(\<maxLength>, <\padString>)**.
 - Random quotes
+- Random background images
+  - Create image (`<img>`) element on HTML document, using **document.createElement(\<tag name>)**.
 
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
@@ -79,6 +81,14 @@ Only used HTML, CSS, Vanilla JavaScript.
     - When timeout, the saved quote will be used.
   - Used [**Fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to download quotes
   - The downloaded (and selected) quote will saved at `localStorage`.
+- Rather than using pre-defined images for background, it download images (daily images from https://source.unsplash.com/daily).
+  - Use queryString (search term) of `nasa`, `water`, `aviation`, `tech`, and `food` in random order.
+  - After fetch (using Fetch API), use [**URL.createObjectURL()**](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL) to show the image on the document.
+  - Rather than using separated `<img>` element, change `backgroundImage` property of `<html>` element.
+    - Set `width` and `height` property of `html` element 100% to fill the screen.
+    - Use [**background-size: cover**](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) to scale the image as large as possible.
+    - Image position at center `background-position: center center`
+    - `background-repeat: no-repeat` to never repeat the image.
 
 | \<Demo Image> | 
 |:--:| 
