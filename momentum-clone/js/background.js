@@ -2,6 +2,9 @@
 const IMAGE_CATEGORY = ["nasa", "water", "aviation", "tech", "food"];
 const IMAGE_BASE_URL = "https://source.unsplash.com/daily";
 
+// HTML Element
+const html = document.querySelector("html")
+
 // Choose image and download
 fetch(`${IMAGE_BASE_URL}?${IMAGE_CATEGORY[Math.floor(Math.random() * IMAGE_CATEGORY.length)]}`)
 .then((response) => {
@@ -22,7 +25,8 @@ fetch(`${IMAGE_BASE_URL}?${IMAGE_CATEGORY[Math.floor(Math.random() * IMAGE_CATEG
 
 
   // Changing background-image URL instead (Change CSS Properties of document)
-  document.querySelector("html").style.background = `URL('${URL.createObjectURL(blob)}') center / cover no-repeat`;
+  html.style.background = `URL('${URL.createObjectURL(blob)}') center / cover no-repeat`;
+  html.style.color = 'white';
 })
 .catch((error) => {
   // When error occurred (Network Error / Server Timeout / etc.)

@@ -78,8 +78,7 @@ Only used HTML, CSS, Vanilla JavaScript.
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 - Rather than using pre-defined list of quotes object, it fetches some quotes from outside API (https://type.fit/api/quotes).
-  - Before it loads the quotes, it will use saved quotes (saved at `localStorage`).
-    - When timeout, the saved quote will be used.
+  - When timeout, the saved quote will be used (saved at `localStorage`).
   - Used [**Fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to download quotes
   - The downloaded (and selected) quote will saved at `localStorage`.
 - Rather than using pre-defined images for background, it download images (daily images from https://source.unsplash.com/daily).
@@ -90,6 +89,8 @@ Only used HTML, CSS, Vanilla JavaScript.
     - Use [**background-size: cover**](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) to scale the image as large as possible.
     - Image position at center `background-position: center`
     - `background-repeat: no-repeat` to never repeat the image.
+- Optimize script loading
+  - use [**defer** and **async**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) keyword
 
 | \<Demo Image> | 
 |:--:| 

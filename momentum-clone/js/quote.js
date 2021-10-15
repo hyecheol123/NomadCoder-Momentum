@@ -6,16 +6,6 @@ const author = document.querySelector("#quote span:last-child");
 const SAVED_QUOTE_NAME = "quote";
 const QUOTE_API_URL = "https://type.fit/api/quotes";
 
-// Check Local Storage (quote is stored as JSON format)
-const savedQuote = localStorage.getItem(SAVED_QUOTE_NAME);
-if(savedQuote !== null) {
-  // If saved quote exists, display the quote
-  const quoteObj = JSON.parse(savedQuote);
-
-  quote.innerText = quoteObj.text;
-  author.innerText = quoteObj.author;
-}
-
 // Download Quotes
 fetch(QUOTE_API_URL).then((response) => {
   if (response.ok) {
@@ -39,4 +29,13 @@ fetch(QUOTE_API_URL).then((response) => {
 .catch((error) => {
   // When error occurred (Network Error / Server Timeout / etc.)
   console.log(error);
+  // Check Local Storage (quote is stored as JSON format) / Use saved quote
+  const savedQuote = localStorage.getItem(SAVED_QUOTE_NAME);
+  if(savedQuote !== null) {
+    // If saved quote exists, display the quote
+    const quoteObj = JSON.parse(savedQuote);
+
+    quote.innerText = quoteObj.text;
+    author.innerText = quoteObj.author;
+  }
 });
