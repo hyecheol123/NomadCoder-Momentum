@@ -73,6 +73,7 @@ Only used HTML, CSS, Vanilla JavaScript.
 - Random quotes
 - Random background images
   - Create image (`<img>`) element on HTML document, using **document.createElement(\<tag name>)**.
+- ToDo list
 
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).

@@ -8,19 +8,34 @@
     <title>Momentum Clone</title>
   </head>
   <body>
+    <!-- Background -->
+    <script async src="js/background.js"></script>
+
+    <!-- Login -->
     <form id="login-form" class="hidden">
       <input required maxlength="15" type="text" placeholder="What is your name?" />
       <button>Log In</button>
     </form>
+
+    <!-- Greeting-->
     <h2 id="clock">00:00:00</h2>
+    <script defer src="js/clock.js"></script>
+
+    <!-- Greeting -->
     <h1 id="greeting" class="hidden"></h1>
+    <script defer src="js/greeting.js"></script>
+
+    <!-- TODO List -->
+    <form id="todo-form">
+      
+    </form>
+    <script defer src="js/todo.js"></script>
+
+    <!-- Quote -->
     <div id="quote">
       <span></span>
       <span></span>
     </div>
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quote.js"></script>
-    <script src="js/background.js"></script>
+    <script async src="js/quote.js"></script>
   </body>
 </html>
