@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum Clone</title>
   </head>
@@ -12,27 +13,32 @@
     <script async src="js/background.js"></script>
 
     <!-- Weather -->
-    <div id="weather">
-      <img id="icon" class="hidden" alt="weather icon" />
+    <div class="hidden" id="weather">
       <span id="city"></span>
-      <span id="description"></span>
-      <span id="temp"></span>
+      <div id="current-weather">
+        <div id="weather-icon">
+          <img id="icon" class="hidden" alt="weather icon" />
+          <span id="temp"></span>
+        </div>
+        <span id="description"></span>
+      </div>
     </div>
     <script async src="js/weather.js"></script>
 
-    <!-- Login -->
-    <form id="login-form" class="hidden">
-      <input required maxlength="15" type="text" placeholder="What is your name?" />
-      <button>Log In</button>
-    </form>
+    <div id="greeting-wrapper">
+      <!-- Greeting-->
+      <h2 id="clock">00:00:00</h2>
+      <script defer src="js/clock.js"></script>
 
-    <!-- Greeting-->
-    <h2 id="clock">00:00:00</h2>
-    <script defer src="js/clock.js"></script>
+      <!-- Greeting -->
+      <h1 id="greeting" class="hidden"></h1>
+      <script defer src="js/greeting.js"></script>
 
-    <!-- Greeting -->
-    <h1 id="greeting" class="hidden"></h1>
-    <script defer src="js/greeting.js"></script>
+      <!-- Login -->
+      <form id="login-form" class="hidden">
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
+      </form>
+    </div>
 
     <!-- TODO List -->
     <form id="todo-form">

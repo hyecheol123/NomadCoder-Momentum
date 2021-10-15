@@ -26,7 +26,8 @@ fetch(`${IMAGE_BASE_URL}?${IMAGE_CATEGORY[Math.floor(Math.random() * IMAGE_CATEG
 
   // Changing background-image URL instead (Change CSS Properties of document)
   html.style.background = `URL('${URL.createObjectURL(blob)}') center / cover no-repeat`;
-  html.style.color = 'white';
+  html.classList.add("white");
+  document.querySelector("#login-form input").classList.add("white");
 })
 .catch((error) => {
   // When error occurred (Network Error / Server Timeout / etc.)

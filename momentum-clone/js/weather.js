@@ -29,12 +29,12 @@ navigator.geolocation.getCurrentPosition((position) => {
   })
   .then((weatherInfo) => {
     // Show weather information on the page
-    weatherDiv.querySelector("#city").innerText = weatherInfo.name;
+    weatherDiv.querySelector("#city").innerText = weatherInfo.name.toUpperCase();
     weatherDiv.querySelector("#description").innerText = weatherInfo.weather[0].main;
     if(unit === "metric") {
-      weatherDiv.querySelector("#temp").innerText = `${weatherInfo.main.temp}°C`;
+      weatherDiv.querySelector("#temp").innerText = `${Math.round(weatherInfo.main.temp)}°C`;
     } else if(unit === "imperial") {
-      weatherDiv.querySelector("#temp").innerText = `${weatherInfo.main.temp}°F`;
+      weatherDiv.querySelector("#temp").innerText = `${Math.round(weatherInfo.main.temp)}°F`;
     } else {
       weatherDiv.querySelector("#temp").innerText = weatherInfo.main.temp;
       console.log("ERROR: WEATHER UNIT ERROR");
@@ -51,6 +51,10 @@ navigator.geolocation.getCurrentPosition((position) => {
       const weatherIcon = weatherDiv.querySelector("#icon");
       weatherIcon.src = URL.createObjectURL(blob);
       weatherIcon.classList.remove("hidden");
+
+      // Show Weather
+      weatherDiv.style.display = "flex";
+      weatherDiv.classList.remove("hidden");
     })
   })
   .catch((error) => {

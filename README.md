@@ -97,10 +97,17 @@ Only used HTML, CSS, Vanilla JavaScript.
     - `background-repeat: no-repeat` to never repeat the image.
 - Optimize script loading
   - use [**defer** and **async**](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) keyword
-- Able to make user's to choose their temperature unit preferrence
-  - Preference will be stored in `localStorage`
-  - By default, Celcius will be used.
 - Display weather icon, retrieved from the API (https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2)
+- Setup menu
+  - Let user to delete username (Will ask username again)
+  - Delete All tasks at once
+  - Able to make user's to choose their temperature unit preferrence
+    - Preference will be stored in `localStorage`
+    - By default, Celcius will be used.
+- Design
+  - Font applied: [NanumBarunGothic](https://github.com/moonspam/NanumBarunGothic)
+  - Location of elements (using `flex`).
+  - Applying color and other properties.
 
 | \<Demo Image> | 
 |:--:| 

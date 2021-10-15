@@ -22,7 +22,7 @@ if (savedUsername === null) {
     loginForm.classList.add(HIDDEN_CLASS_NAME); // Hide form
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username); // Save Username
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `Hello, ${username}`;
     greeting.classList.remove(HIDDEN_CLASS_NAME); // Show greting message
   });
 } else {
