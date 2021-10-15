@@ -74,6 +74,9 @@ Only used HTML, CSS, Vanilla JavaScript.
 - Random background images
   - Create image (`<img>`) element on HTML document, using **document.createElement(\<tag name>)**.
 - ToDo list
+  - Using **target** of `mouseEvent` (generated on click) to identify which todo list item will be removed.
+  - Using **Array.filter()** to delete item of ToDo list.
+    - It gives new array excluding the delete target (Filter function should be coded).
 
 **What I added/modified**  
 - Rather than define a function for each eventListener, I use [**arrow function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
