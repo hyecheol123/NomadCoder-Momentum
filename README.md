@@ -84,10 +84,10 @@ Only used HTML, CSS, Vanilla JavaScript.
 - Rather than using pre-defined images for background, it download images (daily images from https://source.unsplash.com/daily).
   - Use queryString (search term) of `nasa`, `water`, `aviation`, `tech`, and `food` in random order.
   - After fetch (using Fetch API), use [**URL.createObjectURL()**](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL) to show the image on the document.
-  - Rather than using separated `<img>` element, change `backgroundImage` property of `<html>` element.
+  - Rather than using separated `<img>` element, change `background` property of `<html>` element.
     - Set `width` and `height` property of `html` element 100% to fill the screen.
     - Use [**background-size: cover**](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) to scale the image as large as possible.
-    - Image position at center `background-position: center center`
+    - Image position at center `background-position: center`
     - `background-repeat: no-repeat` to never repeat the image.
 
 | \<Demo Image> | 

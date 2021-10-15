@@ -22,7 +22,7 @@ fetch(`${IMAGE_BASE_URL}?${IMAGE_CATEGORY[Math.floor(Math.random() * IMAGE_CATEG
 
 
   // Changing background-image URL instead (Change CSS Properties of document)
-  document.querySelector("html").style.backgroundImage = `URL('${URL.createObjectURL(blob)}')`;
+  document.querySelector("html").style.background = `URL('${URL.createObjectURL(blob)}') center / cover no-repeat`;
 })
 .catch((error) => {
   // When error occurred (Network Error / Server Timeout / etc.)

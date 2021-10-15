@@ -1,8 +1,5 @@
 html {
-  background-color: beige;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
