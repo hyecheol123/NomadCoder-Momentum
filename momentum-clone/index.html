@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum Clone</title>
   </head>
@@ -30,15 +31,29 @@
       <h2 id="clock">00:00:00</h2>
       <script defer src="js/clock.js"></script>
 
-      <!-- Greeting -->
-      <h1 id="greeting" class="hidden"></h1>
-      <script defer src="js/greeting.js"></script>
-
       <!-- Login -->
       <form id="login-form" class="hidden">
         <input required maxlength="15" type="text" placeholder="What is your name?" />
       </form>
+
+      <!-- Greeting -->
+      <h1 id="greeting" class="hidden"></h1>
+      <script defer src="js/greeting.js"></script>
     </div>
+
+    <!-- Setup -->
+    <div id="setup-wrapper">
+      <div id="setting-box">
+        <button id="change-username">Change Username</button>
+        <button id="remove-all-tasks">Remove All Tasks</button>
+        <div id="temp-button">
+          <button id="metric">°C</button>
+          <button id="imperial">°F</button>
+        </div>
+      </div>
+      <i id="setup-icon" class="fas fa-cog"></i>
+    </div>
+    <script defer src="js/setup.js"></script>
 
     <!-- TODO List -->
     <form id="todo-form">

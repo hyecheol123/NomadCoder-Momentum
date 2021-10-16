@@ -116,3 +116,66 @@ input {
   margin-top: 0.2rem;
   font-size: 0.9rem;
 }
+
+#setup-wrapper {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.25rem;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  z-index: 2;
+}
+
+#setup-wrapper #setting-box {
+  width: 10rem;
+  display: none;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  background-color:rgba(128, 128, 128, 0.75);
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+#setup-wrapper #setting-box .selected {
+  background-color: rgba(147, 239, 255, 1);
+  pointer-events: none;
+}
+
+#setup-wrapper #setting-box button {
+  background-color: rgba(211, 211, 211, 1);
+  border: none;
+  height: 2rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#setup-wrapper #setting-box button:hover {
+  background-color: rgba(147, 239, 255, 1);
+}
+
+#setup-wrapper #setting-box #temp-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+#setup-wrapper #setting-box #temp-button button {
+  flex: 1;
+}
+
+#setup-wrapper #setting-box #temp-button button:first-child {
+  margin-right: 0.25rem;
+}
+
+#setup-wrapper #setting-box #temp-button button:last-child {
+  margin-left: 0.25rem;
+}
