@@ -104,6 +104,7 @@ Only used HTML, CSS, Vanilla JavaScript.
   - Able to make user's to choose their temperature unit preferrence
     - Preference will be stored in `localStorage`
     - By default, Celcius will be used.
+- Links to code repo, github profile, and linkedIn Profile
 - Design
   - Font applied: [NanumBarunGothic](https://github.com/moonspam/NanumBarunGothic)
   - Location of elements (using `flex`).

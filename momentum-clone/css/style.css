@@ -278,3 +278,49 @@ input {
   padding: 0;
   margin-right: 0.25rem;
 }
+
+#link-placer {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.25rem;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  z-index: 2;
+}
+
+#link-placer #link-wrapper {
+  display: none;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  background-color:rgba(128, 128, 128, 0.75);
+  color: white;
+  margin-top: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.35rem;
+  padding-left: 0.35rem;
+  border-radius: 0.25rem;
+}
+
+#link-placer #link-wrapper div {
+  display: flex;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+#link-placer #link-wrapper div i {
+  width: 1.5rem;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+#link-placer #link-wrapper div a {
+  text-decoration: none;
+  color: white;
+}
