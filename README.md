@@ -109,9 +109,9 @@ Only used HTML, CSS, Vanilla JavaScript.
   - Location of elements (using `flex`).
   - Applying color and other properties.
 
-| \<Demo Image> | 
+| ![](https://raw.githubusercontent.com/hyecheol123/NomadCoder-Momentum/main/img/demo.png) | 
 |:--:| 
 | *Demo Image of Momentum Clone App* |
 
 Code Link: https://github.com/hyecheol123/NomadCoder-Momentum/tree/main/momentum-clone   
-Demo Link: \<URL>
+Demo Link: https://hyecheol123.github.io/NomadCoder-Momentum/momentum-clone/
