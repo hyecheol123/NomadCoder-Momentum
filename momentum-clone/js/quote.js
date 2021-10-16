@@ -1,6 +1,6 @@
 // HTML Elements
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote span");
+const author = document.querySelector("#author span");
 
 // Constant
 const SAVED_QUOTE_NAME = "quote";
