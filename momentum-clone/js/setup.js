@@ -7,6 +7,7 @@ const SELECTED_CLASS_NAME = "selected";
 const setupIcon = document.querySelector("#setup-wrapper #setup-icon");
 const setupBox = document.querySelector("#setup-wrapper #setting-box");
 const changeUsernameButton = document.querySelector("#setup-wrapper #setting-box #change-username");
+const removeAllToDoButton = document.querySelector("#setup-wrapper #setting-box #remove-all-tasks");
 const celciusButton = document.querySelector("#setup-wrapper #setting-box #temp-button #metric");
 const fahrenheitButton = document.querySelector("#setup-wrapper #setting-box #temp-button #imperial");
 
@@ -24,7 +25,6 @@ if(unit === "metric") {
 
 // Setup icon clicked
 setupIcon.addEventListener("click", () => {
-  console.log("clicked");
   if(setupBox.style.display === "flex") {
     setupBox.style.display = "none";
   } else {
@@ -35,13 +35,23 @@ setupIcon.addEventListener("click", () => {
 // Change Username Button Clicked
 changeUsernameButton.addEventListener("click", () =>{
   // Delete saved username
-  localStorage.removeItem(USERNAME_KEY);
+  localStorage.removeItem("username");
 
   // Call function to reload greeting;
   loadGreeting(); // greeting.js
 });
 
 // Remove All Task Button Clicked
+removeAllToDoButton.addEventListener("click", () => {
+  // Remove Saved TODO list
+  localStorage.removeItem("todos");
+
+  // Clear list of ToDos
+  toDoArray = [];
+
+  // Clear the list
+  document.querySelector("#todo-list").innerHTML = "";
+})
 
 // Change Unit
 celciusButton.addEventListener("click", () => {

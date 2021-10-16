@@ -1,7 +1,10 @@
 // HTML elements
+const toDoWrapper = document.querySelector("#todo-wrapper");
+const toDoBox = document.querySelector("#todo-box");
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector("#todo-list");
+const toDoButton = toDoWrapper.querySelector("#todo-button");
 
 // Retrieve ToDo list from localStorage
 const savedToDo = localStorage.getItem('todos');
@@ -19,11 +22,6 @@ if(savedToDo === null) { // Nothing saved
 // Method to paint ToDo item
 function printToDo(newToDo) {
   const li = document.createElement("li");
-  const span = document.createElement("span");
-  li.appendChild(span);
-  li.id = newToDo.id;
-  span.innerText = newToDo.content;
-  toDoList.appendChild(li);
 
   // Delete Button
   const button = document.createElement("button");
@@ -40,7 +38,22 @@ function printToDo(newToDo) {
     localStorage.setItem("todos", JSON.stringify(toDoArray));
   });
   li.appendChild(button);
+
+  // Contents
+  const span = document.createElement("span");
+  li.appendChild(span);
+  li.id = newToDo.id;
+  span.innerText = newToDo.content;
+  toDoList.appendChild(li);
 }
+
+toDoButton.addEventListener("click", () => {
+  if(toDoBox.style.display === "flex") {
+    toDoBox.style.display = "none";
+  } else {
+    toDoBox.style.display = "flex";
+  }
+})
 
 // When new ToDo entered, it will save new todo and print on the screen.
 toDoForm.addEventListener("submit", (submitEvent) => {
